@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-24T15:07:56.462Z",
+    "end": "2023-11-24T15:09:24.223Z",
+    "duration": 87761,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5c7e2910-af9b-4739-8b36-75df6ce78454",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7699f98-8977-4399-a9d2-abcb6da31d7c",
+          "title": "Login Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login as Valid Username",
+              "fullTitle": "Login Page Login as Valid Username",
+              "timedOut": null,
+              "duration": 20194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/images/login.cy.js/Login Page -- Login as Valid Username.png\"",
+              "code": "cy.xpath(\"//input[@id='user-name']\").type(\"standard_user\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='password']\").type(\"secret_sauce\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='login-button']\").click();\ncy.contains(\"Products\").should('be.visible');\ncy.screenshot();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "8723f842-700f-4536-94f4-71827f613926",
+              "parentUUID": "d7699f98-8977-4399-a9d2-abcb6da31d7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login as Invalid Username",
+              "fullTitle": "Login Page Login as Invalid Username",
+              "timedOut": null,
+              "duration": 17606,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/images/login.cy.js/Login Page -- Login as Invalid Username.png\"",
+              "code": "cy.xpath(\"//input[@id='user-name']\").type(\"standard_user1\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='password']\").type(\"secret_sauce\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='login-button']\").click();\ncy.xpath(\"//h3[contains(text(),'Epic sadface: Username and password do not match a')]\").should('have.text', \"Epic sadface: Username and password do not match any user in this service\");\ncy.screenshot();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "845b584d-a66f-430e-9832-7ec2790e141e",
+              "parentUUID": "d7699f98-8977-4399-a9d2-abcb6da31d7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Signin Using Wrong Password",
+              "fullTitle": "Login Page Signin Using Wrong Password",
+              "timedOut": null,
+              "duration": 16982,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/images/login.cy.js/Login Page -- Signin Using Wrong Password.png\"",
+              "code": "cy.xpath(\"//input[@id='user-name']\").type(\"standard_user\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='password']\").type(\"secret_sauce1\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='login-button']\").click();\ncy.xpath(\"//h3[contains(text(),'Epic sadface: Username and password do not match a')]\").should('have.text', \"Epic sadface: Username and password do not match any user in this service\");\ncy.screenshot();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "3ae70837-71f1-4b1a-b1e2-40ff3cbc4576",
+              "parentUUID": "d7699f98-8977-4399-a9d2-abcb6da31d7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Signin Not Fill Username",
+              "fullTitle": "Login Page Signin Not Fill Username",
+              "timedOut": null,
+              "duration": 16388,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/images/login.cy.js/Login Page -- Signin Not Fill Username.png\"",
+              "code": "cy.xpath(\"//input[@id='user-name']\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='password']\").type(\"secret_sauce\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='login-button']\").click();\ncy.xpath(\"//h3[normalize-space()='Epic sadface: Username is required']\").should('have.text', \"Epic sadface: Username is required\");\ncy.screenshot();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "30700e52-52a2-4f57-b2a7-3aab99d4ebcc",
+              "parentUUID": "d7699f98-8977-4399-a9d2-abcb6da31d7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Signin Not Fill Password",
+              "fullTitle": "Login Page Signin Not Fill Password",
+              "timedOut": null,
+              "duration": 16003,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/images/login.cy.js/Login Page -- Signin Not Fill Password.png\"",
+              "code": "cy.xpath(\"//input[@id='user-name']\").type(\"standard_user\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='password']\");\ncy.wait(3000);\ncy.xpath(\"//input[@id='login-button']\").click();\ncy.xpath(\"//h3[normalize-space()='Epic sadface: Password is required']\").should('have.text', \"Epic sadface: Password is required\");\ncy.screenshot();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "74fcaf33-b9ba-4efc-9635-b06f8e448305",
+              "parentUUID": "d7699f98-8977-4399-a9d2-abcb6da31d7c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8723f842-700f-4536-94f4-71827f613926",
+            "845b584d-a66f-430e-9832-7ec2790e141e",
+            "3ae70837-71f1-4b1a-b1e2-40ff3cbc4576",
+            "30700e52-52a2-4f57-b2a7-3aab99d4ebcc",
+            "74fcaf33-b9ba-4efc-9635-b06f8e448305"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 87173,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "Automation-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/mochawesomeresults",
+        "reportFilename": "Automation-report",
+        "reportPageTitle": "Test-Result",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

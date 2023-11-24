@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-24T15:09:27.557Z",
+    "end": "2023-11-24T15:09:55.689Z",
+    "duration": 28132,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1c2d859d-43cd-4032-b206-b2ea195671e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\sorting.cy.js",
+      "file": "cypress\\e2e\\sorting.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8dbd139-2924-4f4c-9696-f9e5e552734f",
+          "title": "Sorting in Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Choose Price (low to high)",
+              "fullTitle": "Sorting in Home Page Choose Price (low to high)",
+              "timedOut": null,
+              "duration": 28033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/images/sorting.cy.js/Sorting in Home Page -- Choose Price (low to high).png\"",
+              "code": "cy.xpath(\"//select[@class='product_sort_container']\").select(\"lohi\");\ncy.wait(3000);\ncy.xpath(\"//div[@class='inventory_list']//div[1]//div[2]//div[2]//div[1]\").should('have.text', \"$7.99\");\ncy.screenshot();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "b3a4361b-0629-4f11-aa5e-c3acfcadaf1f",
+              "parentUUID": "b8dbd139-2924-4f4c-9696-f9e5e552734f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b3a4361b-0629-4f11-aa5e-c3acfcadaf1f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28033,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "Automation-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/mochawesomeresults",
+        "reportFilename": "Automation-report",
+        "reportPageTitle": "Test-Result",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
